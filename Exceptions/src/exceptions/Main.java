@@ -5,6 +5,11 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * main class
+ * @author beata
+ *
+ */
 public class Main {
 	// - create a class InvalidArgumentException extending class RuntimeException
 	// - create a class NumberTooBigException extending class Exception

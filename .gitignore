@@ -33,3 +33,7 @@ packages/
 *.class
 /.metadata/
 /.recommenders/
+/.sonarlint
+.classpath
+.project
+.settings

@@ -1,0 +1,94 @@
+package data;
+
+import java.time.LocalDate;
+
+public class Book extends Publication {
+
+    private static final long serialVersionUID = 1L;
+    private String author;
+    private int pages;
+    private String isbn;
+
+    public Book(LocalDate date, String title, String publisher, String author, int pages, String isbn) {
+	super(date, title, publisher);
+	this.author = author;
+	this.pages = pages;
+	this.isbn = isbn;
+    }
+
+    public String getAuthor() {
+	return author;
+    }
+
+    public int getPages() {
+	return pages;
+    }
+
+    public String getIsbn() {
+	return isbn;
+    }
+
+    public void setAuthor(String author) {
+	this.author = author;
+    }
+
+    public void setPages(int pages) {
+	this.pages = pages;
+    }
+
+    public void setIsbn(String isbn) {
+	this.isbn = isbn;
+    }
+
+    @Override
+    public String toString() {
+	StringBuilder print = new StringBuilder(32);
+	print.append(getTitle());
+	print.append("; ");
+	print.append(getAuthor());
+	print.append("; ");
+	print.append(getDate());
+	print.append("; ");
+	print.append(getPages());
+	print.append("; ");
+	print.append(getPublisher());
+	print.append("; ");
+	print.append(getIsbn());
+	return print.toString();
+    }
+
+    @Override
+    public int hashCode() {
+	final int prime = 31;
+	int result = super.hashCode();
+	result = prime * result + ((author == null) ? 0 : author.hashCode());
+	result = prime * result + ((isbn == null) ? 0 : isbn.hashCode());
+	result = prime * result + pages;
+	return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+	if (this == obj)
+	    return true;
+	if (!super.equals(obj))
+	    return false;
+	if (getClass() != obj.getClass())
+	    return false;
+	Book other = (Book) obj;
+	if (author == null) {
+	    if (other.author != null)
+		return false;
+	} else if (!author.equals(other.author))
+	    return false;
+	if (isbn == null) {
+	    if (other.isbn != null)
+		return false;
+	} else if (!isbn.equals(other.isbn))
+	    return false;
+	if (pages != other.pages)
+	    return false;
+	return true;
+    }
+
+}

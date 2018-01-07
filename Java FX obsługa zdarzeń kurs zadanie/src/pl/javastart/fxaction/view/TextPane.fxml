@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.javastart.fxaction.controller.TextPaneController">
+   <children>
+      <TextArea id="text-area-1" fx:id="firstTextArea" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+      <TextArea id="text-area-2" fx:id="secondTextArea" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+   </children>
+</HBox>

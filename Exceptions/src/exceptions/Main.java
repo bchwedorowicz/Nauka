@@ -53,6 +53,7 @@ public class Main {
 				System.err.println(e.getMessage());
 			} catch (Exception e) {
 				e.printStackTrace();
+				System.err.println(e.getMessage());
 			}
 		}
 	}
